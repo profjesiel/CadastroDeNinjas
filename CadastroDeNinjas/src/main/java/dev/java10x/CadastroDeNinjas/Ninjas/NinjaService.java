@@ -18,10 +18,13 @@ public class NinjaService {
     }
 
     //Listar todos os ninjas por ID
-    public NinjaModel listarNinjasPoriI(Long id){
+    public NinjaModel listarNinjasPoriId(Long id){
         Optional<NinjaModel> ninjaPorId = ninjaRepository.findById(id);
         return ninjaPorId.orElse(null);
     }
 
-
+    //Criar um novo ninja
+    public NinjaModel criarNinja(NinjaModel ninja){
+        return ninjaRepository.save(ninja);
+    }
 }

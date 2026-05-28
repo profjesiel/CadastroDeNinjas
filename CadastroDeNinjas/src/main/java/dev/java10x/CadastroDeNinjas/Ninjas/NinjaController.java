@@ -21,14 +21,14 @@ public class NinjaController {
 
     //Adicionar Ninja (CREATE)
     @PostMapping("/criar")
-    public String criarNinja(){
-        return "Mostrar Ninja";
+    public NinjaModel criarNinja(@RequestBody NinjaModel ninja){
+        return ninjaService.criarNinja(ninja);
     }
 
     //Mostrar Ninja por ID (READ) - {id} variável do caminho
     @GetMapping("/listar/{id}")
     public NinjaModel listarNinjasPoriId(@PathVariable Long id){
-        return ninjaService.listarNinjasPoriI(id);
+        return ninjaService.listarNinjasPoriId(id);
     }
 
     //Mostrar todos os Ninjas (READ)
