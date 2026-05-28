@@ -25,10 +25,10 @@ public class NinjaController {
         return "Mostrar Ninja";
     }
 
-    //Mostrar Ninja por ID (READ)
-    @GetMapping("/listarPorID")
-    public String mostrarTodosNinjasPorID(){
-        return "Mostrar Ninja po ID";
+    //Mostrar Ninja por ID (READ) - {id} variável do caminho
+    @GetMapping("/listar/{id}")
+    public NinjaModel listarNinjasPoriId(@PathVariable Long id){
+        return ninjaService.listarNinjasPoriI(id);
     }
 
     //Mostrar todos os Ninjas (READ)
