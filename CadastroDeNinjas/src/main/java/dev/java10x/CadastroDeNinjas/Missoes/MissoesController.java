@@ -8,6 +8,7 @@ public class MissoesController {
     @GetMapping("/missoes")
     public String missoes(){
         return "Mensgem Teste de Missões";
+
     }
      //Adicionar missão
     @PostMapping("/criar")
