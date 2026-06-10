@@ -22,6 +22,9 @@ target/
 ### .env ###
 .env
 
+### .db ###
+.db
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
